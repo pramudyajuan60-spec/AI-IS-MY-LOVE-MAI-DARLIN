@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Daily Journal</title>
+  <link rel="icon" href="img/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style> 
+    :root { --journal-pink: #f3d0d4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #292d32; font-family: Arial, Helvetica, sans-serif; }
+    .navbar { min-height: 40px; padding: 0; background: #f8f9fa; }
+    .navbar .container { min-height: 40px; }
+    .navbar-brand { font-size: 14px; font-weight: 400 !important; margin: 0; }
+    .navbar .nav-link { font-size: 12px; padding: 10px 8px !important; color: #555; }
+    #hero { background: var(--journal-pink); padding: 32px 0 !important; }
+    #hero .hero-inner { min-height: 314px; }
+    #hero h1 { font-size: clamp(30px, 4vw, 40px); line-height: 1.18; letter-spacing: -.5px; margin-bottom: 8px; }
+    #hero .lead { font-size: clamp(21px, 2.5vw, 28px); line-height: 1.25; font-weight: 300; margin: 0; }
+    #hero img { width: 208px; height: 312px; object-fit: cover; flex: 0 0 auto; }
+    #article { padding: 8px 0 28px !important; background: #fff; }
+    #article h1, #gallery h1 { font-size: 38px; line-height: 1.2; margin: 0 0 14px; }
+    #article .card { border: 1px solid #d5d5d5; border-radius: 5px; overflow: hidden; height: 100%; }
+    #article .card-img-top { width: 100%; height: 120px; object-fit: cover; }
+    #article .card-body { padding: 10px 12px 12px; }
+    #article .card-title { font-size: 14px; font-weight: 400; margin-bottom: 6px; }
+    #article .card-text { font-size: 12px; line-height: 1.4; margin: 0; }
+    #article .card-footer { background: #f8f8f8; color: #777; font-size: 10px; padding: 8px 5px; border-top: 1px solid #ddd; }
+    #gallery { background: var(--journal-pink); padding: 12px 0 32px !important; }
+    #gallery h1 { margin-bottom: 14px; }
+    #gallery .container { max-width: 1140px; }
+    #gallery .carousel-inner { border-radius: 0 !important; }
+    #gallery .carousel-item img { display: block; width: 100%; height: auto; max-height: none; object-fit: cover; }
+    #gallery .carousel-indicators { margin-bottom: 8px; }
+    footer { padding: 28px 0 22px !important; background: #fff; }
+    footer a { text-decoration: none; }
+    footer .social i { font-size: 25px; padding: 0 5px; }
+    footer p { font-size: 12px; color: #555; margin-top: 2px; }
+    @media (min-width: 768px) {
+      #hero .container { max-width: 1140px; }
+      #hero .hero-inner { display: flex; flex-direction: row-reverse; align-items: center; gap: 42px; }
+      #hero .hero-copy { flex: 1; }
+      #article .container { max-width: 1140px; }
+    }
+    @media (max-width: 767.98px) {
+      #hero { padding: 28px 0 !important; }
+      #hero .hero-inner { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+      #hero img { width: 180px; height: 260px; align-self: center; }
+      #hero h1 { font-size: 30px; }
+      #article h1, #gallery h1 { font-size: 32px; }
+      #gallery .container { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">My Daily Journal</a>
+      <button class="navbar-toggler py-1" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNavbar">
+        
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#article">Article</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div id="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=85" alt="Buku jurnal dan catatan kenangan">
+          <div class="hero-copy">
+            <h1 class="fw-bold">Create Memories, Save Memories, Everyday</h1>
+            <p class="lead">Mencatat semua kegiatan sehari-hari yang ada tanpa terkecuali</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="article" class="text-center">
+    <div class="container">
+      <h1 class="fw-bold">Article</h1>
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Perpustakaan kampus">
+            <div class="card-body"><h2 class="card-title">Perpustakaan Kampus</h2><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></div>
+            <div class="card-footer">Last updated 3 mins ago</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Ruang kelas">
+            <div class="card-body"><h2 class="card-title">Ruang Kelas</h2><p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p></div>
+            <div class="card-footer">Last updated 3 mins ago</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Kelompok belajar" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80'">
+            <div class="card-body"><h2 class="card-title">Kelompok Belajar</h2><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p></div>
+            <div class="card-footer">Last updated 3 mins ago</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Ruang kelas">
+            <div class="card-body"><h2 class="card-title">Ruang Kelas</h2><p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p></div>
+            <div class="card-footer">Last updated 3 mins ago</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=600&q=80" alt="Buku dan meja">
+            <div class="card-body"><h2 class="card-title">Waktu Membaca</h2><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p></div>
+            <div class="card-footer">Last updated 3 mins ago</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Belajar bersama">
+            <div class="card-body"><h2 class="card-title">Belajar Bersama</h2><p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p></div>
+            <div class="card-footer">Last updated 3 mins ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="text-center">
+    <div class="container">
+      <h1 class="fw-bold">Gallery</h1>
+      <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselGallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselGallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselGallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1500&q=85" alt="Mahasiswa berjalan di area kampus"></div>
+          <div class="carousel-item"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1500&q=85" alt="Teman-teman menghabiskan waktu bersama"></div>
+          <div class="carousel-item"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1500&q=85" alt="Mahasiswa belajar bersama"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Sebelumnya</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Berikutnya</span></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="social">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram text-dark"></i></a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter text-dark"></i></a>
+      <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp text-dark"></i></a>
+    </div>
+    <p>Aprilyani Nur Safitri © 2023</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
